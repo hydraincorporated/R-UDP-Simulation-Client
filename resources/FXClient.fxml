@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="600.0" maxWidth="1111.0" minHeight="222.0" minWidth="222.0" prefHeight="600.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Hydra.Network.Controller">
+  <children>
+    <GridPane prefHeight="586.0" prefWidth="857.9999000000025" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="14.0">
+      <children>
+        <AnchorPane minHeight="64.0" prefHeight="82.0" prefWidth="558.0" style="" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+          <children>
+            <GridPane prefHeight="90.25" prefWidth="558.0" style="" AnchorPane.bottomAnchor="-1.9" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-6.35">
+              <children>
+                <GridPane alignment="TOP_CENTER" prefHeight="45.0" prefWidth="422.0" GridPane.columnIndex="0" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.vgrow="SOMETIMES">
+                  <children>
+                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="45.0" prefWidth="314.0" text="Connection status:" textAlignment="LEFT" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                      <font>
+                        <Font name="Open Sans Regular" size="15.0" fx:id="x4" />
+                      </font>
+                      <GridPane.margin>
+                        <Insets right="5.0" />
+                      </GridPane.margin>
+                    </Label>
+                    <Label id="connection" fx:id="connectionInfoLabel" alignment="CENTER_LEFT" contentDisplay="LEFT" font="$x4" prefHeight="47.000007539987564" prefWidth="235.0" text="ready" textAlignment="LEFT" textFill="GREY" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                      <GridPane.margin>
+                        <Insets left="5.0" fx:id="x3" />
+                      </GridPane.margin>
+                    </Label>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="362.0" minWidth="10.0" prefWidth="314.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="10.0" prefWidth="244.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+                <GridPane GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <children>
+                    <TextField id="ServerAddressTF" fx:id="serverAddressTF" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="32.999900000002526" prefWidth="235.0" text="localhost" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                    <Button id="ConnectButton" fx:id="connectButton" mnemonicParsing="false" prefHeight="36.0" prefWidth="177.0" text="Connect" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                      <font>
+                        <Font name="Open Sans Semibold" size="12.0" />
+                      </font>
+                    </Button>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </AnchorPane>
+        <AnchorPane disable="false" minHeight="77.0" prefHeight="77.0" prefWidth="558.0" style="" GridPane.columnIndex="0" GridPane.rowIndex="2">
+          <children>
+            <GridPane fx:id="optionsPane" disable="true" prefHeight="99.0" prefWidth="541.0" style="" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+              <children>
+                <CheckBox fx:id="reliableCheckbox" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="164.0" text="Reliable" textAlignment="LEFT" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                  <font>
+                    <Font size="16.0" fx:id="x1" />
+                  </font>
+                </CheckBox>
+                <CheckBox fx:id="orderedCheckbox" alignment="CENTER" contentDisplay="CENTER" disable="true" font="$x1" mnemonicParsing="false" prefHeight="31.0" prefWidth="164.0" text="Ordered" textAlignment="LEFT" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <CheckBox fx:id="lossCheckbox" alignment="CENTER" contentDisplay="CENTER" font="$x1" mnemonicParsing="false" prefHeight="31.0" prefWidth="164.0" text="Extra packet loss" textAlignment="LEFT" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="85.0" prefWidth="558.0" style="" GridPane.columnIndex="0" GridPane.rowIndex="4">
+          <children>
+            <GridPane fx:id="slidersPane" alignment="CENTER" disable="true" opacity="1.0" prefHeight="99.00009999999747" prefWidth="554.0" style="" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="3.0">
+              <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="244.0" text="Hydra.Packets per second:" textAlignment="LEFT" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                  <font>
+                    <Font size="15.0" fx:id="x2" />
+                  </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" font="$x2" prefHeight="25.0" prefWidth="242.0" text="Lose chance" textAlignment="LEFT" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Slider fx:id="loseChance" majorTickUnit="0.15" max="0.7" maxWidth="-Infinity" min="0.0" minorTickCount="0" opacity="0.5" prefWidth="248.0" rotate="0.0" showTickLabels="true" showTickMarks="false" snapToTicks="false" value="0.2" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+                  <GridPane.margin>
+                    <Insets left="5.0" fx:id="x3" />
+                  </GridPane.margin>
+                </Slider>
+                <Slider fx:id="packetsPerSecond" disable="false" majorTickUnit="15.0" max="60.0" maxWidth="-Infinity" min="0.0" minorTickCount="0" opacity="1.0" orientation="HORIZONTAL" prefWidth="248.0" showTickLabels="true" showTickMarks="false" snapToTicks="false" value="15.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.margin="$x3" GridPane.rowIndex="0" GridPane.vgrow="NEVER" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="242.0" />
+                <ColumnConstraints hgrow="NEVER" maxWidth="375.0" minWidth="10.0" prefWidth="286.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="59.0" prefWidth="454.0" GridPane.columnIndex="0" GridPane.rowIndex="6">
+          <children>
+            <GridPane fx:id="inputPane" disable="true" prefHeight="60.0" prefWidth="528.0" style="" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="1.0">
+              <children>
+                <Button fx:id="startButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="148.0" text="Start" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                <GridPane id="inputPane" alignment="CENTER_RIGHT" disable="false" gridLinesVisible="false" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.vgrow="SOMETIMES">
+                  <children>
+                    <TextField fx:id="messageTextfield" alignment="CENTER" editable="true" maxWidth="-Infinity" prefHeight="33.0" prefWidth="222.0" promptText="Packet message" text="" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                      <GridPane.margin>
+                        <Insets left="15.0" />
+                      </GridPane.margin>
+                    </TextField>
+                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="36.0" prefWidth="63.0" text="Message:" textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                      <font>
+                        <Font size="14.0" />
+                      </font>
+                    </Label>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="95.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="254.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="565.0" minWidth="10.0" prefWidth="245.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="441.0" minWidth="10.0" prefWidth="394.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="275.0" prefWidth="858.0" GridPane.columnIndex="0" GridPane.rowIndex="8">
+          <children>
+            <GridPane id="asd" fx:id="statsPane" disable="true" prefHeight="396.0" prefWidth="528.0" style="" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="14.0">
+              <children>
+                <GridPane alignment="CENTER" GridPane.columnIndex="0" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.vgrow="SOMETIMES">
+                  <children>
+                    <Label alignment="CENTER_RIGHT" font="$x1" prefHeight="31.0" prefWidth="132.0" text="Sent:" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                    <Label alignment="CENTER_RIGHT" font="$x1" prefHeight="31.0" prefWidth="132.0" text="Confirmed:" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                    <Label alignment="CENTER_RIGHT" font="$x1" prefHeight="31.0" prefWidth="132.0" text="Lost:" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                    <Label fx:id="sentLabel" alignment="CENTER_LEFT" font="$x1" prefHeight="31.0" prefWidth="132.0" text="-1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                    <Label fx:id="confirmedLabel" alignment="CENTER_LEFT" font="$x1" prefHeight="31.0" prefWidth="132.0" text="-1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                    <Label fx:id="lostLabel" alignment="CENTER_LEFT" font="$x1" prefHeight="31.0" prefWidth="132.0" text="-1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="150.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="114.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+                <GridPane GridPane.columnIndex="1" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.vgrow="SOMETIMES">
+                  <children>
+                    <Label alignment="CENTER_RIGHT" font="$x1" prefHeight="31.0" prefWidth="132.0" text="Buffer:" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                    <Label alignment="CENTER_RIGHT" font="$x1" prefHeight="31.0" prefWidth="132.0" text="Avg RTT:" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                    <Label alignment="CENTER_RIGHT" font="$x1" prefHeight="31.0" prefWidth="132.0" text="Time:" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                    <Label id="receivedLabel" fx:id="bufferLabel" alignment="CENTER_LEFT" font="$x1" prefHeight="31.0" prefWidth="132.0" text="-1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+                    <Label fx:id="pingLabel" alignment="CENTER_LEFT" font="$x1" prefHeight="31.0" prefWidth="132.0" text="-1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                    <Label fx:id="timeLabel" alignment="CENTER_LEFT" font="$x1" prefHeight="31.0" prefWidth="132.0" text="-1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="155.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="109.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+                <LineChart fx:id="lostPerSecondChart" createSymbols="true" legendVisible="false" prefHeight="161.0" prefWidth="264.0" style="" title="Lost per second" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <xAxis>
+                    <NumberAxis animated="true" autoRanging="true" label="Time" side="BOTTOM" tickLabelGap="3.0" tickLabelsVisible="true" tickLength="5.0" upperBound="10.0" />
+                  </xAxis>
+                  <yAxis>
+                    <NumberAxis label="Hydra.Packets" side="LEFT" />
+                  </yAxis>
+                </LineChart>
+                <AreaChart fx:id="sequenceChart" legendVisible="false" title="Sequence Difference" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <xAxis>
+                    <NumberAxis autoRanging="true" forceZeroInRange="false" label="Time" side="BOTTOM" tickMarkVisible="true" upperBound="10.0" />
+                  </xAxis>
+                  <yAxis>
+                    <NumberAxis autoRanging="false" forceZeroInRange="false" label="Difference" side="LEFT" tickLabelGap="5.0" tickLength="2.0" tickMarkVisible="true" tickUnit="5.0" upperBound="50.0" />
+                  </yAxis>
+                </AreaChart>
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="197.0" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="246.0" minHeight="10.0" prefHeight="246.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="33.0" prefWidth="558.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+          <children>
+            <Separator prefWidth="528.0" style="" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0" />
+          </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="33.0" prefWidth="558.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+          <children>
+            <Separator prefWidth="528.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0" />
+          </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="33.0" prefWidth="558.0" GridPane.columnIndex="0" GridPane.rowIndex="5">
+          <children>
+            <Separator prefWidth="528.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0" />
+          </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="33.0" prefWidth="558.0" GridPane.columnIndex="0" GridPane.rowIndex="7">
+          <children>
+            <Separator prefWidth="528.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0" />
+          </children>
+        </AnchorPane>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints fillHeight="false" maxHeight="362.0" minHeight="0.0" prefHeight="72.0" valignment="CENTER" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="375.0" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="375.0" minHeight="0.0" prefHeight="38.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="524.0" minHeight="0.0" prefHeight="17.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="524.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="524.0" minHeight="0.0" prefHeight="14.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="524.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="524.0" minHeight="10.0" prefHeight="13.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="524.0" minHeight="10.0" prefHeight="279.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+</AnchorPane>
